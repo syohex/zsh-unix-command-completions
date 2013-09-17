@@ -1,6 +1,6 @@
 #compdef emacsclient
 
-_arguments -n : \
+_arguments -s -n : \
   '(-a --alternate-editor)'{-a,--alternate-editor=}'[Run specified editor if Emacs server is not running]' \
   '(-c --create-frame)'{-c,--create-frame}'[Create a new frame]' \
   '(-F --frame-parameters)'{-F,--frame-parameters=}'[Set the parameters of a new frame]' \
