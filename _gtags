@@ -1,5 +1,8 @@
 #compdef gtags
 
+local -a labels
+labels=(ctags-exuberant pygments)
+
 _arguments -n : \
   '(--accept-dotfiles)--accept-dotfiles[Accept dot files and dot directories]' \
   '(-c --compact)'{-c,--compact}'[Make GTAGS in compact format]' \
@@ -7,7 +10,7 @@ _arguments -n : \
   '(-d --dump)'{-d,--dump}'[Dump a tag file]' \
   '(-f --file)'{-f,--file}'[Browse through all source files whose names are listed in file]' \
   '(--gtagsconf)--gtagsconf[Set the GTAGSCONF envirnoment variable to file]:conffile:_files' \
-  '(--gtagslabel)--gtagslabel[Set the GTAGSLABEL environment variable to label]' \
+  '(--gtagslabel)--gtagslabel=[Set the GTAGSLABEL environment variable to label]:labels:'"($labels)" \
   '(-I --idutils)'{-I,--idutils}'[Also make the ID database file for idutils]' \
   '(-i --incremental)'{-i,--incremental}'[Update tag files incrementally]' \
   '(-O --objdir)'{-O,--objdir}'[Use BSD-style objedir as location of tag files]' \
@@ -16,6 +19,7 @@ _arguments -n : \
   '(-q --quiet)'{-q,--quiet}'[Quiet mode]' \
   '(-v --verbose)'{-v,--verbose}'[Verbose mode]' \
   '(-w --warning)'{-w,--warning}'[Print warnings messages]' \
+  '(--debug)--debug[Enable debug mode]' \
   '*: :_files'
 
 # Local Variables:
