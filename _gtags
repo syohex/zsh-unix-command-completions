@@ -20,7 +20,8 @@ _arguments -n : \
   '(-v --verbose)'{-v,--verbose}'[Verbose mode]' \
   '(-w --warning)'{-w,--warning}'[Print warnings messages]' \
   '(--debug)--debug[Enable debug mode]' \
-  '*: :_files'
+  '(- :)--help[Print usage message]' \
+  '*: :_files -/'
 
 # Local Variables:
 # mode: Shell-Script
