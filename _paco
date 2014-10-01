@@ -5,10 +5,10 @@ packages=($(paco -a -1))
 
 _arguments -n : \
   '(-a --all)'{-a,--all}'[Apply the specified action to all packages]' \
-  '(-)'{-h,--help}'[Display a help message and exit]' \
+  '(- :)'{-h,--help}'[Display a help message and exit]' \
   '(-L --logdir)'{-L,--logdir}'[Base log directory]:Dir:_files -/' \
   '(-v --verbose)'{-v,--verbose}'[Verbose output]' \
-  '(-)--version[Display version information and exit]' \
+  '(- :)--version[Display version information and exit]' \
   '(-u --update)'{-u,--update}'[Synchronize packages with current status of file system]' \
   '(-U --unlog)'{-U,--unlog}'[Remove the log of the package from the database]' \
   '(-b --block-size)'{-b,--block-size=}'[Use blocks of size bytes for the sizes]' \
