@@ -1,16 +1,13 @@
 #compdef gtags
 
-local -a labels
-labels=(ctags-exuberant pygments)
-
 _arguments -n : \
   '(--accept-dotfiles)--accept-dotfiles[Accept dot files and dot directories]' \
   '(-c --compact)'{-c,--compact}'[Make GTAGS in compact format]' \
   '(--config)--config[Print the value of config variable name]' \
   '(-d --dump)'{-d,--dump}'[Dump a tag file]' \
-  '(-f --file)'{-f,--file}'[Browse through all source files whose names are listed in file]' \
-  '(--gtagsconf)--gtagsconf[Set the GTAGSCONF envirnoment variable to file]:conffile:_files' \
-  '(--gtagslabel)--gtagslabel=[Set the GTAGSLABEL environment variable to label]:labels:'"($labels)" \
+  '(-f --file)'{-f,--file}'[Browse through all source files whose names are listed in file]:file:_files' \
+  '(--gtagsconf)--gtagsconf=-[Set the GTAGSCONF envirnoment variable to file]:conffile:_files' \
+  '(--gtagslabel)--gtagslabel=-[Set the GTAGSLABEL environment variable to label]::labels:(ctags-exuberant pygments)' \
   '(-I --idutils)'{-I,--idutils}'[Also make the ID database file for idutils]' \
   '(-i --incremental)'{-i,--incremental}'[Update tag files incrementally]' \
   '(-O --objdir)'{-O,--objdir}'[Use BSD-style objedir as location of tag files]' \
