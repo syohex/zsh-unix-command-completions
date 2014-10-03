@@ -56,9 +56,9 @@ _arguments -n : \
   '(--minify)--minify[Compresses the target JavaScript code]' \
   '(--enable-source-map)--enable-source-map[Enables source map debugging info]' \
   '(--complete)--complete[Shows code completion at line:column]' \
-  '(-)--version[Displays the version and compiler identifier and exits]' \
-  '(-)--version-number[Displays the version as number and exits]' \
-  '(-)--help[Displays this help and exits]' \
+  '(- :)--version[Displays the version and compiler identifier and exits]' \
+  '(- :)--version-number[Displays the version as number and exits]' \
+  '(- :)--help[Displays this help and exits]' \
   '*: :_files -/ -g "*.jsx(-.)"'
 
 # Local Variables:
