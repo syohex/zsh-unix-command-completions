@@ -1,7 +1,7 @@
 #compdef paco
 
 local -a packages
-packages=($(paco -a -1))
+packages=($(paco -a -1 2>/dev/null))
 
 _arguments -n : \
   '(-a --all)'{-a,--all}'[Apply the specified action to all packages]' \
