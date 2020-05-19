@@ -1,0 +1,62 @@
+#compdef clang-tidy
+
+# The MIT License (MIT)
+#
+# Copyright (c) 2020 Shohei YOSHIDA
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE.
+
+_arguments \
+  '--allow-enabling-analyzer-alpha-checkers[enable alpha checkers]' \
+  '--checks=[check list]: :' \
+  '--config=[specifies a configuration in YAML/JSON format]: :' \
+  '--dump-config[dumps configuration in the YAML format to stdout]' \
+  '--enable-check-profile[enable per-check timing profiles]' \
+  '--explain-config[enable check explains]' \
+  '--export-fixes=[YAML file to store suggested fixes in]:file:_files' \
+  '--extra-arg=[additional argument to append to the compiler command line]:arg:' \
+  '--extra-arg-before=[additional argument to prepend to the compiler command line]:arg:' \
+  '--fix[apply suggested fixes]' \
+  '--fix-errors[apply suggested fixes even if compilation errors were found]' \
+  '--format-style=[style for formatting code around applied fixes]:style:' \
+  '--header-filter=[regular expression matching the names of the headers to output diagnostics form]:filter:' \
+  '(- : *)'{-h,--help}'[display available options]' \
+  '(- : *)--help-hidden[display all available options]' \
+  '(- : *)--help-list[display list of available options]' \
+  '(- : *)--help-list-hidden[display list of all avilable options]' \
+  '--line-filter=[list of files with line ranges to filter the warnings]:filter:' \
+  '--list-checks[list all enabled checks and exit]' \
+  '-p=[build path]:path:_files -/' \
+  '--print-all-options[print all option values after command line pargins]' \
+  '--print-options[print non-default option values after command line pargins]' \
+  '--quiet[run clang-tidy in quiet mode]' \
+  '--store-check-profile=[reports storesd as JSON]:prefix:' \
+  '--system-headers=[display the errors from system headers]' \
+  '(- : *)--version[display the version of this program]' \
+  '--vfsoverlay=[overlay the virtual filesystem described by file over the real file system]:file:_files' \
+  '--warnings-as-errors=[upgrades warnings to errors]:option:' \
+  '*:: : _files'
+
+# Local Variables:
+# mode: Shell-Script
+# sh-indentation: 2
+# indent-tabs-mode: nil
+# sh-basic-offset: 2
+# End:
+# vim: ft=zsh sw=2 ts=2 et

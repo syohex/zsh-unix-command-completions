@@ -22,7 +22,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-_arguments -n : \
+_arguments \
   '(--Wno-clang-format-violations)--Wclang-format-violations[warnings about individual formatting changes needed]' \
   '(--Wclang-format-violations)--Wnoclang-format-violations[do not warn about individual formatting changes needed]' \
   '--Werror[changes formatting warnings to error]' \
@@ -34,6 +34,7 @@ _arguments -n : \
   '(--fno-color-diagnostics)--fcolor-diagnostics[print diagnostics in color]' \
   '(--fcolor-diagnostics)--fno-color-diagnostics[not print diagnostics in color]' \
   '--ferror-limit=[set the maximum number of clangformat errors]:number:' \
+  '-i[inplace edit]' \
   '--length=[formata a range of this length in bytes]:number:' \
   '--lines=[format a range of lines]' \
   '--offset=[format range starting at this byte offset]:number:' \
@@ -45,9 +46,10 @@ _arguments -n : \
   '(- : *)--help-hidden[display all available options]' \
   '(- : *)--help-list[display list of available options]' \
   '(- : *)--help-list-hidden[display list of all available options]' \
-  '(- : *)--print-all-options[print all option values after command line parsing]' \
-  '(- : *)--print-options[print non-default option values after command line parsing]' \
+  '--print-all-options[print all option values after command line parsing]' \
+  '--print-options[print non-default option values after command line parsing]' \
   '(- : *)--version[display the version of this program]' \
+  '*:: : _files'
 
 # Local Variables:
 # mode: Shell-Script
