@@ -1,0 +1,58 @@
+#compdef clang-format
+
+# The MIT License (MIT)
+#
+# Copyright (c) 2020 Shohei YOSHIDA
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE.
+
+_arguments -n : \
+  '(--Wno-clang-format-violations)--Wclang-format-violations[warnings about individual formatting changes needed]' \
+  '(--Wclang-format-violations)--Wnoclang-format-violations[do not warn about individual formatting changes needed]' \
+  '--Werror[changes formatting warnings to error]' \
+  '--assume-filename=[override filename used to determine the language]: :' \
+  '--cursor=[the position of the cursor then invoking clang-format]:number:' \
+  '(-n --dry-run)'{-n,--dry-run}'[do not actually make the formatting changes]' \
+  '--dump-config[dump configuration options to stdout and exit]' \
+  '--fallback-style=[the name of predefined style used as a fallback]' \
+  '(--fno-color-diagnostics)--fcolor-diagnostics[print diagnostics in color]' \
+  '(--fcolor-diagnostics)--fno-color-diagnostics[not print diagnostics in color]' \
+  '--ferror-limit=[set the maximum number of clangformat errors]:number:' \
+  '--length=[formata a range of this length in bytes]:number:' \
+  '--lines=[format a range of lines]' \
+  '--offset=[format range starting at this byte offset]:number:' \
+  '--output-replacements-xml[output replacements as XML]' \
+  '--sort-includes[overrides the include sorting behavior]' \
+  '--style=[coding style]:style:' \
+  '--verbose[show the list of processed files]' \
+  '(- : *)--help[display available options]' \
+  '(- : *)--help-hidden[display all available options]' \
+  '(- : *)--help-list[display list of available options]' \
+  '(- : *)--help-list-hidden[display list of all available options]' \
+  '(- : *)--print-all-options[print all option values after command line parsing]' \
+  '(- : *)--print-options[print non-default option values after command line parsing]' \
+  '(- : *)--version[display the version of this program]' \
+
+# Local Variables:
+# mode: Shell-Script
+# sh-indentation: 2
+# indent-tabs-mode: nil
+# sh-basic-offset: 2
+# End:
+# vim: ft=zsh sw=2 ts=2 et
